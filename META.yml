@@ -28,4 +28,4 @@ requires:
   Mojolicious::Plugin::RelativeUrlFor: 0.01
   Mojolicious::Plugin::Subdispatch: 0.02
   Text::Markdown: 1.000031
-version: 0.31
+version: 0.311
