@@ -14,11 +14,8 @@ sub call_script {
     my $command = shift // '';
     die "suspicious command: '$command'" unless $command =~ /^\w*$/;
 
-    # explicit interpreter usage for windows
-    my $interpreter = ($^O =~ /MSWin/) ? $^X : '';
-
     # call and return STDOUT output
-    open my $script, '-|', "$interpreter $Bin/../contenticious $command"
+    open my $script, '-|', "$^X $Bin/../contenticious $command"
         or die "couldn't call contenticious script with command '$command': $!";
     return do { local $/; <$script> };
 }
