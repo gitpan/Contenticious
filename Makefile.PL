@@ -1,15 +1,25 @@
+use 5.010001;
+
 use strict;
 use warnings;
-use 5.10.0;
 
 use ExtUtils::MakeMaker;
 
 WriteMakefile(
-    NAME            => 'Contenticious',
-    VERSION_FROM    => 'lib/Contenticious.pm',
-    AUTHOR          => 'Mirko Westermeier <mail@memowe.de>',
-    EXE_FILES       => ['contenticious'],
-    PREREQ_PM       => {
+    NAME                => 'Contenticious',
+    VERSION_FROM        => 'lib/Contenticious.pm',
+    ABSTRACT            => 'build web sites from markdown files',
+    AUTHOR              => 'Mirko Westermeier <mail@memowe.de>',
+    LICENSE             => 'mit',
+    META_MERGE          => {
+        resources   => {
+            homepage    => 'http://memowe.github.com/contenticious/',
+            bugtracker  => 'http://github.com/memowe/contenticious/issues',
+            repository  => 'http://github.com/memowe/contenticious',
+        },
+    },
+    MIN_PERL_VERSION    => '5.10.1',
+    PREREQ_PM           => {
 
         # core modules since 5.10
         'Carp'                                  => '1.08',
@@ -25,5 +35,6 @@ WriteMakefile(
         'Mojolicious::Plugin::RelativeUrlFor'   => '0.01',
         'Text::Markdown'                        => '1.000031',
     },
-    test            => {TESTS => 't/*.t'}
+    EXE_FILES           => ['contenticious'],
+    test                => {TESTS => 't/*.t'}
 );
