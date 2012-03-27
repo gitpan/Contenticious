@@ -178,6 +178,20 @@ its L<wiki|https://github.com/kraih/mojo/wiki>. In most cases you want to set
 the C<chached> option to a true value in contenticious' config file to
 increase performance.
 
+If you plan to deploy your content with Mojolicious' built-in production server
+Hypnotoad, your contenticious config file is the right place to configure
+it as well:
+
+    {
+        ...
+        cached      => 0,
+        hypnotoad   => {
+            listen  => ['http://*:3000'], 
+            workers => 10,  
+            proxy   => 1,
+        },
+    }
+
 But if you don't expect your content to be updated very often, just let
 Contenticious generate static HTML and CSS files for you:
 
