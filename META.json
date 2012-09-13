@@ -38,7 +38,7 @@
             "File::Path" : "2.04",
             "FindBin" : "1.49",
             "List::Util" : "1.19",
-            "Mojolicious" : "3.00",
+            "Mojolicious" : "3.40",
             "Mojolicious::Plugin::RelativeUrlFor" : "0.01",
             "Mojolicious::Plugin::Subdispatch" : "0.02",
             "Text::Markdown" : "1.000031",
@@ -56,5 +56,5 @@
          "url" : "http://github.com/memowe/contenticious"
       }
    },
-   "version" : "0.327"
+   "version" : "0.328"
 }
