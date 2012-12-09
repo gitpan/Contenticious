@@ -26,11 +26,11 @@ requires:
   List::Util: 1.19
   Mojolicious: 3.40
   Mojolicious::Plugin::RelativeUrlFor: 0.01
-  Mojolicious::Plugin::Subdispatch: 0.02
+  Mojolicious::Plugin::Subdispatch: 0.03
   Text::Markdown: 1.000031
   perl: 5.010001
 resources:
   bugtracker: http://github.com/memowe/contenticious/issues
   homepage: http://memowe.github.com/contenticious/
   repository: http://github.com/memowe/contenticious
-version: 0.33
+version: 0.331
